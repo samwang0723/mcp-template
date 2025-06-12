@@ -97,3 +97,7 @@ jspm_packages/
 
 # TernJS port file
 .tern-port
+
+# Generated test projects
+mcp-test-*/
+mcp-sample-*/

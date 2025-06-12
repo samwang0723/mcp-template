@@ -22,7 +22,29 @@ A production-ready TypeScript template for creating Model Context Protocol (MCP)
 
 ## 🛠️ Quick Start
 
-### 1. Clone and Setup
+### Option 1: Use the Project Generator (Recommended)
+
+```bash
+# Clone the template
+git clone <your-repo-url>
+cd mcp-template
+
+# Create a new project using the generator
+./create-mcp-project your-project-name --description "Your project description" --author "Your Name"
+
+# Or use the Node.js script directly
+node setup-new-project.js your-project-name --description "Your project description" --author "Your Name"
+```
+
+#### Generator Options:
+
+- `--description <desc>`: Project description
+- `--author <name>`: Author name
+- `--target-dir <dir>`: Target directory (default: mcp-<project-name>)
+- `--install-deps`: Install npm dependencies automatically
+- `--no-git`: Skip git repository initialization
+
+### Option 2: Manual Setup
 
 ```bash
 # Clone the template
@@ -77,10 +99,43 @@ mcp-template/
 │   │   └── index.ts      # Main config file
 │   ├── utils/            # Utility functions
 │   └── index.ts          # Main server application
+├── create-mcp-project    # Bash script for project generation
+├── setup-new-project.js  # Node.js project generator
 ├── Dockerfile            # Docker configuration
 ├── package.json          # Dependencies and scripts
 ├── tsconfig.json         # TypeScript configuration
 └── README.md            # This file
+```
+
+## 🔧 Project Generator
+
+This template includes powerful project generation tools to quickly create new MCP servers:
+
+### Features:
+
+- **Automatic Name Conversion**: Converts kebab-case names to all required formats (camelCase, PascalCase, etc.)
+- **File Templating**: Updates all files with the new project name and details
+- **Git Integration**: Optionally initializes a new git repository
+- **Dependency Management**: Can automatically install npm dependencies
+- **Smart Copy Logic**: Excludes development files and prevents infinite recursion
+
+### Usage Examples:
+
+```bash
+# Basic usage
+./create-mcp-project weather-service
+
+# With full options
+./create-mcp-project task-manager \
+  --description "AI-powered task management MCP server" \
+  --author "Your Name" \
+  --install-deps
+
+# Custom target directory
+./create-mcp-project file-processor --target-dir ./my-custom-server
+
+# Skip git initialization
+./create-mcp-project data-analyzer --no-git
 ```
 
 ## 🔧 Architecture
