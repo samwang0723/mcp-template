@@ -12,6 +12,7 @@ class McpProjectGenerator {
   constructor() {
     this.templateDir = __dirname;
     this.excludeFiles = [
+      'create-mcp-project',
       'setup-new-project.js',
       '.git',
       'node_modules',
