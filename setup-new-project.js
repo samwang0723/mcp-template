@@ -14,6 +14,7 @@ class McpProjectGenerator {
     this.excludeFiles = [
       'create-mcp-project',
       'setup-new-project.js',
+      'package-lock.json',
       '.git',
       'node_modules',
       'dist',

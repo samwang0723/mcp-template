@@ -10,7 +10,7 @@ import {
   isInitializeRequest,
 } from '@modelcontextprotocol/sdk/types.js';
 import dotenv from 'dotenv';
-import config from '@config/index';
+import config from './config/index.js';
 
 // Load environment variables
 dotenv.config();

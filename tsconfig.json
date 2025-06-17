@@ -16,9 +16,7 @@
     "declaration": true,
     "baseUrl": "./src",
     "paths": {
-      "@/*": ["./*"],
-      "@config/*": ["./config/*"],
-      "@utils/*": ["./utils/*"]
+      "@/*": ["./*"]
     }
   },
   "include": ["src/**/*"],

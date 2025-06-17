@@ -1,5 +1,5 @@
 import winston from 'winston';
-import config from '@config/index';
+import config from '../config/index.js';
 
 interface CustomLogger extends winston.Logger {
   getLevel(): string;
