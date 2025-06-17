@@ -233,9 +233,9 @@ LOG_LEVEL=info
    */
   initializeGit(projectDir) {
     try {
-      execSync('git init', { cwd: projectDir, stdio: 'pipe' });
+      execSync('git init -b main', { cwd: projectDir, stdio: 'pipe' });
       execSync('git add .', { cwd: projectDir, stdio: 'pipe' });
-      execSync('git commit -m "Initial commit: MCP server template setup"', {
+      execSync('git commit -m "chore: MCP server template setup"', {
         cwd: projectDir,
         stdio: 'pipe',
       });
