@@ -34,12 +34,6 @@ COPY --from=builder /app/dist ./dist
 # Copy configuration files
 COPY --from=builder /app/tsconfig.json ./tsconfig.json
 
-# Copy .env file if it exists
-COPY --from=builder /app/.env ./.env
-
-# Expose the port
-EXPOSE 3000
-
 # Set environment variables
 ENV NODE_ENV=production
 
